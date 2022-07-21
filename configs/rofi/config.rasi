@@ -1,0 +1,133 @@
+@import "colors.rasi"
+
+configuration {
+	modi:				"drun";
+	font: 				"Source Code Pro 12";
+	icon-theme: 			"Papirus";
+	location: 			2;
+	yoffset: 			100;
+	xoffset: 			0;
+	transparency: 			"real";
+	fixed-num-lines:		true;
+	show-icons: 			true;
+	scroll-method: 			0;
+	drun-show-actions: 		false;
+	drun-display-format: 		"{name}";
+	drun-url-launcher: 		"xdg-open";
+	drun-match-fields: 		"{name}";
+	drun-show-actions: 		true;
+	disable-history: 		true;
+	sort: 				true;
+	case-sensitive: 		false;
+	cycle: 				false;
+	sidebar-mode: 			false;
+	hover-select: 			true;
+	eh: 				1;
+	auto-select: 			false;
+	hide-scrollbar: 		true;
+	matching: 			"normal";
+	dpi: 				-1;
+	threads: 			0;
+	click-to-exit: 			true;
+	max-history-size: 		5;
+	window-thumbnail: 		false;
+	drun-use-desktop-cache: 	false;
+	drun-reload-desktop-cache:	false;
+	normalize-match: 		false;
+	steal-focus: 			true;
+	pid: 				"/run/user/1000/rofi.pid";
+	display-drun: 			"window";
+
+}
+
+window {
+        transparency:                   "real";
+        border:                         7px;
+	width: 				50%;
+	height:				75%;
+        border-radius:                  1px;
+        border-color:                   @foreground;
+}
+
+entry {
+        background-color: 		@background-alt;
+	text-color:			#000000;
+	placeholder-color:		#000000;
+	expand:				true;
+	horizontal-align:		0.5;
+	placeholder:			" Type here to search";
+	padding:			10px;
+	margin:				0;
+   	border:                         0px 0px 2px 0px;
+    	border-radius:                  6px;	
+	blink:				true;	
+}
+
+inputbar {
+	children:			[ entry ];
+	background-color:		@background;
+	text-color:			@background;
+	border-color:			@primary;
+	margin:				5px 0px 5px 0px;	
+}
+
+
+listview {
+	background-color:		@background;
+	padding:			10px;
+	columns:			4;
+	lines:				3;	
+	spacing:			0%;
+	cycle:				true;
+	dynamic:			true;
+	layout:				vertical;
+	hide-scrollbar:			true;
+}
+
+
+mainbox {
+	background-color:		@background;
+	border:				0px;
+	border-color:			@primary;
+	children:			[ inputbar, listview ];
+	spacing:			0%;
+	padding:			8px;
+}
+
+element {
+	background-color:		inherit;
+	orientation:			vertical;
+	border-color:			@primary;
+	border-radius:			0%;
+	padding:			10px; 
+}
+
+element-icon, element-text {
+    	background-color:               @background;
+    	text-color:                     @foreground;
+}
+
+element-icon {
+    	horizontal-align:               0.5;
+ 	vertical-align:                 0.5;
+	size:                           36px;
+	border:                         16px;
+	border-color:                   @background;
+}
+
+element-text {
+    	expand:                         false;
+    	horizontal-align:               0.5;
+    	vertical-align:                 0.5;
+    	margin:                         -12px 0px 6px 0px;
+	border:				0px;
+
+}
+
+element selected {
+    	background-color:               @background;
+    	text-color:                     @foreground;
+    	border:                         0px 0px 2px 0px;
+    	border-color:                   @primary;
+    	border-radius:                  10px;
+}
