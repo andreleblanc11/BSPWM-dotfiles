@@ -1,4 +1,4 @@
-# my-arch-dots
+# BSPWM dotfiles
 ***
 -   **WM** : [bspwm](https://github.com/baskerville/bspwm)
 -   **Shell** : bash
@@ -14,9 +14,8 @@
 
 ## Preview
 ***
-![[Rice_Screenshot1.png]]
-
-![[Rice_Screenshot2.png]]
+![alt text](https://github.com/andreleblanc11/dotfiles/blob/master/Preview/Rice_Screenshot1.png)
+![alt text](https://github.com/andreleblanc11/dotfiles/blob/master/Preview/Rice_Screenshot2.png)
 
 ## Notes
 ***
