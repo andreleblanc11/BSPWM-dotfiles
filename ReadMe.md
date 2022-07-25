@@ -40,11 +40,13 @@ fi
 - This is my first time doing dot files. These probably won't be perfect haha.
 
 ```
-mkdir -p ~/.config && git clone https://github.com/andreleblanc11/my-arch-dots.git
+mkdir -p ~/.config && git clone https://github.com/andreleblanc11/BSPWM-dotfiles.git
 
-cd my-arch-dots && cp -r config/* ~/.config/
+cd BSPWM-dotfiles && cp -r configs/* ~/.config/
 
 mkdir -p ~/Pictures/Wallpapers && cp -r Wallpapers/* ~/Pictures/Wallpapers/
+
+mkdir ~/bin && cp -r bin/* ~/bin
 
 cp xinitrc ~/.xinitrc
 ```
