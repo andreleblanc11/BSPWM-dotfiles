@@ -14,6 +14,14 @@ super + Return
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# Decrement brightness by 5
+F5
+	sudo light -U 5
+
+# Increment brightness by 5
+F6
+	sudo light -A 5
+
 
 
 #
@@ -61,6 +69,10 @@ super + o
 #Take screenshot of desktop
 super + shift + {s}
 	maim ~/Pictures/Screenshots/Screenshot.png
+
+#Toggle between keymaps
+super + shift + {k}
+	exec ~/bin/ToggleKeyMaps.sh
 
 
 #

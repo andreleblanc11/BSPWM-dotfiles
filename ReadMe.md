@@ -18,8 +18,9 @@
 
 ***
 
-![](Rice_Screenshot2.png)
-![](Rice_Screenshot1.png)
+![Photo 1](https://github.com/andreleblanc11/dotfiles/blob/master/Preview/Rice_Screenshot1.jpg)
+![Photo 2](https://github.com/andreleblanc11/dotfiles/blob/master/Preview/Rice_Screenshot2.jpg)
+![Photo 3](https://github.com/andreleblanc11/dotfiles/blob/master/Preview/Rice_Screenshot3.jpg)
 
 ## Notes
 
