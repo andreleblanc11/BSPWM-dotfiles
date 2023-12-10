@@ -1,12 +1,21 @@
 #! /bin/sh
+#
+#
+# Dual monitor setup
+#
+if [ -x /home/andre/bin/DualMonitorSetUp.sh ];then
+	bash /home/andre/bin/DualMonitorSetUp.sh
+fi
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 polybar monitor1 &
 polybar monitor2 &
+polybar monitor3 &
 
 bspc monitor eDP-1 -d  1 2 3 
-bspc monitor HDMI-2 -d 4 5 6
-
+bspc monitor DVI-I-1-1 -d  4 5 6 
+bspc monitor DVI-I-2-2 -d  7 8 9 
+# bspc monitor HDMI-2 -d 4 5 6
 
 #
 # Configs
@@ -26,13 +35,6 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-
-#
-# Dual monitor setup
-#
-if [ -x $HOME/bin/DualMonitorSetUp.sh ];then
-	exec DualMonitorSetUp.sh
-fi
 
 # Wallpaper and cursor set
 hsetroot -fill $HOME/Pictures/AttackOnTitan.jpg
