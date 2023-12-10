@@ -72,7 +72,7 @@ super + shift + {s}
 
 #Toggle between keymaps
 super + shift + {k}
-	exec ~/bin/ToggleKeyMaps.sh
+	exec /home/andre/bin/ToggleKeyMaps.sh
 
 
 #
