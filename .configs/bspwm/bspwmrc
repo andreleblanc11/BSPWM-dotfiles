@@ -50,5 +50,4 @@ picom -b --config $HOME/.config/picom-ibhagwan-git/src/picom/picom.conf --experi
 firefox &
 alacritty &
 obsidian &
-
-
+keepassxc &
