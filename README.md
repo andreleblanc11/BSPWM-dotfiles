@@ -26,9 +26,15 @@
 
 ***
 
-- Application launcher still contains a bug. The background of each element is *white* at every odd number.
+### Directories
+
+- `etc` directory corresponds to the contents inside the `/etc` directory locally.
+
+
+### Additional steps
+
 - I will try to integrate [PyWal](https://github.com/dylanaraps/pywal) later on.
-- My set up is configured for two monitors. If you only use one monitor, use you can modify the **bspwmrc** accordingly.
+- My set up is configured for three monitors. If you only use one monitor, use you can modify the **bspwmrc** accordingly.
 
 ``` shell
 bspc monitor eDP-1 -d  1 2 3 4 5 6
