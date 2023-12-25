@@ -26,14 +26,27 @@
 
 ***
 
+### Git Hooks
+- Git hooks have been added in the local repository accompanied with a script titled `pull_latest_changes.sh` which:
+    - Pulls the latest changes in the local machines' file structure and auto-adds them inside the repository as needed.
+- One git hook auto-runs this scrcipt as a `pre-commit`
+- Another script executes `pacman -Q > Packages` as a `post-commit` to get the list of the latest packages installed.
+
+
 ### Directories
 
 - `etc` directory corresponds to the contents inside the `/etc` directory locally.
+- `bin` directory correspondes to `$HOME/bin`
+- `.configs` directory correspondes to `$HOME/.config`
 
 
-### Additional steps
+### Next Steps
 
 - I will try to integrate [PyWal](https://github.com/dylanaraps/pywal) later on.
+
+
+## Download and installation
+
 - My set up is configured for three monitors. If you only use one monitor, use you can modify the **bspwmrc** accordingly.
 
 ``` shell
@@ -51,12 +64,10 @@ if [ -x $HOME/bin/DualMonitorSetUp.sh ];then
 fi
 ```
 
-
-## Download and installation
-
 ***
 
-- This is my first time doing dot files. These probably won't be perfect haha.
+- TODO: Update with smarter auto-install script.
+- Execute the following commands to have a basis of the configuration files for installation. 
 
 ```shell
 mkdir -p ~/.config && git clone https://github.com/andreleblanc11/BSPWM-dotfiles.git
