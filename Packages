@@ -21,6 +21,7 @@ avahi 1:0.8+r189+g35bb1ba-1
 base 3-2
 base-devel 1-1
 bash 5.2.021-1
+bind 9.18.21-1
 binutils 2.41-3
 bison 3.8.2-6
 blueberry 1.4.8-1
@@ -114,6 +115,7 @@ gmp 6.3.0-1
 gn 0.2130.7367b0df-1
 gnome-bluetooth 3.34.5+r16+g61cfff1c-2
 gnu-free-fonts 20120503-8
+gnu-netcat 0.7.1-9
 gnupg 2.4.3-2
 gnutls 3.8.2-1
 gobject-introspection-runtime 1.78.1-1
@@ -157,6 +159,7 @@ java-environment-common 3-5
 java-runtime-common 3-5
 jbigkit 2.1-7
 jdk-openjdk 21.u35-8
+jemalloc 1:5.3.0-3
 jq 1.7.1-1
 js78 78.15.0-4
 json-c 0.17-1
@@ -226,6 +229,7 @@ libjxl 0.8.2-2
 libksba 1.6.5-1
 libldap 2.6.6-2
 libluv 1.45.0_0-1
+libmaxminddb 1.8.0-1
 libmfx 23.2.2-2
 libmnl 1.0.5-1
 libmodplug 0.8.9.0-5
@@ -337,6 +341,7 @@ lld 16.0.6-1
 llvm 16.0.6-1
 llvm-libs 16.0.6-1
 lm_sensors 1:3.6.0.r41.g31d1f125-2
+lmdb 0.9.31-1
 lshw B.02.19.2-6
 luajit 2.1.1702233742-1
 luit 20230201-1
@@ -361,6 +366,7 @@ nano 7.2-1
 ncurses 6.4_20230520-1
 neofetch 7.1.0-2
 neovim 0.9.4-2
+net-tools 2.10-2
 netctl 1.29-1
 nettle 3.9.1-1
 ninja 1.11.1-3
@@ -371,6 +377,7 @@ npm 10.2.5-1
 npth 1.6-4
 nspr 4.35-2
 nss 3.95-1
+ntfs-3g 2022.10.3-1
 obsidian 1.4.16-1
 ocl-icd 2.3.2-1
 onevpl 2023.4.0-1
@@ -413,6 +420,7 @@ polybar 3.7.1-1
 polybar-spotify 20200619_b5c59238a17180affae5232c234175524a17d1c4-3
 popt 1.19-1
 portaudio 1:19.7.0-2
+postfix 3.8.4-1
 procps-ng 4.0.4-2
 psmisc 23.6-1
 pulseaudio 16.1-7
@@ -491,6 +499,7 @@ rtkit 0.13-2
 rubberband 3.3.0-1
 run-parts 5.5-1
 rustup 1.26.0-5
+s-nail 14.9.24-2
 sbc 2.0-1
 sdl2 2.28.5-1
 sed 4.9-3
@@ -520,10 +529,12 @@ systemd-libs 255-2
 systemd-sysvcompat 255-2
 tar 1.35-2
 tcl 8.6.13-1
+tcpdump 4.99.4-1
 tdb 1.4.9-1
 texinfo 7.1-2
 tk 8.6.13-2
 tpm2-tss 4.0.1-1
+traceroute 2.1.3-1
 tracker3 3.6.0-2
 tree 2.1.1-1
 tree-sitter 0.20.10-2
@@ -625,4 +636,5 @@ xvidcore 1.3.7-2
 xz 5.4.5-1
 zimg 3.0.5-1
 zlib 1:1.3-2
+zsh 5.9-4
 zstd 1.5.5-1
