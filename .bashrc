@@ -30,12 +30,6 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# Do a git pull of all git repos
-
-# if [ -f ~/bin/pull_git.sh ]; then
-# 	. ~/bin/pull_git.sh
-# fi
-
 # Set correct audio drivers
 if [ -f ~/bin/set_audio_drivers.sh ]; then
 	. ~/bin/set_audio_drivers.sh

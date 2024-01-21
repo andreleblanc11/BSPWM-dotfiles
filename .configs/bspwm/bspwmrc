@@ -48,6 +48,7 @@ picom -b --config $HOME/.config/picom-ibhagwan-git/src/picom/picom.conf --experi
 
 # Start up apps 
 firefox &
-alacritty &
+# alacritty &
+alacritty -e bash -c "tmux attach" &
 obsidian &
 keepassxc &
