@@ -44,7 +44,7 @@ xsetroot -cursor_name left_ptr &
 # Startup applications
 #
 # Startup transparency (not used anymore)?
-picom -b --config $HOME/.config/picom-ibhagwan-git/src/picom/picom.conf --experimental-backends &
+picom -b --config $HOME/.config/picom-ibhagwan-git/src/picom/picom.conf &
 
 # Start up apps 
 firefox &
