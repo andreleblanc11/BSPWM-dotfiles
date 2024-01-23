@@ -49,6 +49,11 @@ picom -b --config $HOME/.config/picom-ibhagwan-git/src/picom/picom.conf --experi
 # Start up apps 
 firefox &
 # alacritty &
-alacritty -e bash -c "tmux attach" &
+# If there is already a session running, attach to it.
+if [[ $(tmux ls) ]]; then
+	alacritty -e bash -c "tmux attach" &
+else
+	alacritty -e bash -c "tmux" &
+fi
 obsidian &
 keepassxc &

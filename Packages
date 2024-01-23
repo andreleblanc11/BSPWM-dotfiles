@@ -97,6 +97,7 @@ freetype2 2.13.2-1
 fribidi 1.0.13-2
 fuse-common 3.16.2-1
 fuse2 2.9.9-4
+galculator 2.1.4-8
 gawk 5.3.0-1
 gc 8.2.4-1
 gcc 13.2.1-3
@@ -538,6 +539,7 @@ tcpdump 4.99.4-1
 tdb 1.4.9-1
 texinfo 7.1-2
 tk 8.6.13-2
+tmux 3.3_a-7
 tpm2-tss 4.0.1-1
 traceroute 2.1.5-1
 tracker3 3.6.0-3
