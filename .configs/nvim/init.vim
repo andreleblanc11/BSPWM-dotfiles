@@ -22,12 +22,6 @@ filetype plugin on
 filetype on
 
 
-""" Colors, fonts and themes
-colorscheme tokyonight-night
-set guifont=Hurmit\ Nerd-Fonts\ Monospace\ 12
-"""set background=dark
-
-
 """ Enable lua plugins
 lua << EOF
 require('nvim-treesitter-config')
@@ -38,6 +32,12 @@ require('tab-config')
 require('status-config')
 require('cursor-config')
 require('nvim-numbertoggle')
+require('pywal')
 EOF
+
+""" Colors, fonts and themes
+colorscheme pywal
+set guifont=Hurmit\ Nerd-Fonts\ Monospace\ 12
+"""set background=dark
 
 syntax on

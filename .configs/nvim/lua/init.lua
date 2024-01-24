@@ -38,6 +38,7 @@ return require('packer').startup(function()
 	-- Color schemes, icons and fonts
 	use 'Mofiqul/dracula.nvim'
 	use 'folke/tokyonight.nvim'
+	use { 'AlphaTechnolog/pywal.nvim', as = 'pywal' }
 
 	-- Tabs and cursors
 	use {'akinsho/bufferline.nvim', requires='nvim-tree/nvim-web-devicons'}
