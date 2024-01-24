@@ -36,10 +36,15 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
+# 
 # Wallpaper and cursor set
+#
 hsetroot -fill $HOME/Downloads/Hashira_DemonSlayer.jpg
 xsetroot -cursor_name left_ptr &
 
+# 
+# Set up pywal theme
+# 
 . "${HOME}/.cache/wal/colors.sh"
 bspc config normal_border_color "$color1"
 bspc config active_border_color "$color2"
@@ -63,7 +68,10 @@ else
 fi
 
 obsidian &
-# keepassxc &
 
+if [ -f $HOME/bin/update_obsidian_theme.sh ]; then
+	. $HOME/bin/update_obsidian_theme.sh 
+fi
 
+# Apply pywal theme to rest of system
 sleep 1 && . "${HOME}/.config/pywal/walstart.sh"

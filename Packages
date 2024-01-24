@@ -150,6 +150,7 @@ hwdata 0.378-1
 hwloc 2.10.0-1
 iana-etc 20231117-1
 icu 74.2-1
+imagemagick 7.1.1.27-1
 imath 3.1.9-2
 imlib2 1.12.1-1
 iproute2 6.7.0-1
@@ -232,6 +233,7 @@ libjpeg-turbo 3.0.1-1
 libjxl 0.8.2-2
 libksba 1.6.5-1
 libldap 2.6.6-2
+liblqr 0.4.2-3
 libluv 1.47.0_0-1
 libmaxminddb 1.9.1-1
 libmfx 23.2.2-2
@@ -263,6 +265,7 @@ libpng 1.6.40-2
 libproxy 0.5.3-2
 libpsl 0.21.2-1
 libpulse 17.0-3
+libraqm 0.10.1-1
 libraw1394 2.1.2-3
 librsvg 2:2.57.1-1
 libsamplerate 0.2.2-2
@@ -474,6 +477,7 @@ python-pydantic-core 1:2.14.6-1
 python-pygments 2.17.2-1
 python-pyopenssl 23.3.0-1
 python-pyparsing 3.1.1-1
+python-pywal 3.3.0-8
 python-requests 2.31.0-1
 python-resolvelib 1.0.1-1
 python-rich 13.7.0-1
