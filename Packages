@@ -478,6 +478,7 @@ python-pygments 2.17.2-1
 python-pyopenssl 23.3.0-1
 python-pyparsing 3.1.1-1
 python-pywal 3.3.0-8
+python-pywalfox 2.7.4-1
 python-requests 2.31.0-1
 python-resolvelib 1.0.1-1
 python-rich 13.7.0-1

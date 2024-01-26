@@ -1,6 +1,21 @@
 #! /bin/sh
 #
 #
+# Variables
+# Attribute random value to background
+RAND=$((1+$RANDOM%3))
+if [[ $RAND == 1 ]]
+then
+	export BACKGROUND=$HOME/Pictures/AttackOnTitan.jpg
+elif [[ $RAND == 2 ]]
+then
+	export BACKGROUND=$HOME/Pictures/Hashira_DemonSlayer.jpg
+elif [[ $RAND == 3 ]]
+then
+	export BACKGROUND=$HOME/Pictures/space-man.jpg
+fi
+
+
 # Dual monitor setup
 #
 if [ -x /home/andre/bin/DualMonitorSetUp.sh ];then
@@ -39,7 +54,7 @@ bspc rule -a Screenkey manage=off
 # 
 # Wallpaper and cursor set
 #
-hsetroot -fill $HOME/Downloads/Hashira_DemonSlayer.jpg
+hsetroot -fill $BACKGROUND
 xsetroot -cursor_name left_ptr &
 
 # 
@@ -61,17 +76,17 @@ picom -b --config $HOME/.config/picom-ibhagwan-git/src/picom/picom.conf &
 firefox &
 
 # If there is already a session running, attach to it.
-if [[ $(tmux ls) ]]; then
-	alacritty -e bash -c "tmux attach" &
-else
-	alacritty -e bash -c "tmux" &
-fi
-
-obsidian &
-
-if [ -f $HOME/bin/update_obsidian_theme.sh ]; then
-	. $HOME/bin/update_obsidian_theme.sh 
-fi
+# if [[ $(tmux ls) ]]; then
+# 	alacritty -e bash -c "tmux attach" &
+# else
+# 	alacritty -e bash -c "tmux" &
+# fi
+alacritty &
 
 # Apply pywal theme to rest of system
 sleep 1 && . "${HOME}/.config/pywal/walstart.sh"
+
+obsidian &
+
+if [[ -f $HOME/bin/update_obsidian_theme.sh ]]; then $HOME/bin/update_obsidian_theme.sh ; fi
+

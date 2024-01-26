@@ -35,6 +35,5 @@ if [ -f ~/bin/set_audio_drivers.sh ]; then
 	. ~/bin/set_audio_drivers.sh
 fi
 
-# Set background ENV VARIABLE and launch pywal
-export BACKGROUND="${HOME}/Pictures/Hashira_DemonSlayer.jpg"
+# Launch pywal
 wal -i $BACKGROUND -q -e
