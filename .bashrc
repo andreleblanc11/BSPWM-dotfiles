@@ -36,4 +36,4 @@ if [ -f ~/bin/set_audio_drivers.sh ]; then
 fi
 
 # Launch pywal
-wal -i $BACKGROUND -q -e
+cat ~/.cache/wal/sequences

@@ -2,7 +2,7 @@
 #
 #
 # Variables
-# Attribute random value to background
+# Attribute random value to background. Will change everytime system boots up.
 RAND=$((1+$RANDOM%3))
 if [[ $RAND == 1 ]]
 then
@@ -70,10 +70,12 @@ bspc config presel_feedback_color "$color1"
 #
 # Startup applications
 #
-# Startup transparency 
-picom -b --config $HOME/.config/picom-ibhagwan-git/src/picom/picom.conf &
 
-firefox &
+# Startup firefox
+if [[ -f $HOME/bin/firefox_startup.sh ]]
+then
+	. "${HOME}/bin/firefox_startup.sh"
+fi
 
 # If there is already a session running, attach to it.
 # if [[ $(tmux ls) ]]; then
@@ -81,12 +83,32 @@ firefox &
 # else
 # 	alacritty -e bash -c "tmux" &
 # fi
+
+# Startup alacritty
+# Kill sessions before starting
+killall alacritty
 alacritty &
 
 # Apply pywal theme to rest of system
-sleep 1 && . "${HOME}/.config/pywal/walstart.sh"
+# Wait a bit for changes to apply to polybar
+sleep 1 
 
+if [[ -f $HOME/.config/pywal/walstart.sh ]]
+then
+	. "${HOME}/.config/pywal/walstart.sh"
+fi
+
+# Startup obisidan notes
+killall electron
 obsidian &
 
-if [[ -f $HOME/bin/update_obsidian_theme.sh ]]; then $HOME/bin/update_obsidian_theme.sh ; fi
+# Update obsidian pywal theme
+if [[ -f $HOME/bin/update_obsidian_theme.sh ]]
+then 
+	$HOME/bin/update_obsidian_theme.sh
+fi
+
+# Startup transparency 
+# 
+picom -b --config $HOME/.config/picom-ibhagwan-git/src/picom/picom.conf &
 
