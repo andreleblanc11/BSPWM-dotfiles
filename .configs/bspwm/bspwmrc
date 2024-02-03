@@ -19,18 +19,22 @@ fi
 # Dual monitor setup
 #
 if [ -x /home/andre/bin/DualMonitorSetUp.sh ];then
-	bash /home/andre/bin/DualMonitorSetUp.sh
+	bash /home/andre/bin/DualMonitorSetUp.sh DVI-I-1-1 DVI-I-2-2
 fi
 
 pgrep -x sxhkd > /dev/null || sxhkd &
+
+# Add monitors
+bspc monitor eDP-1 -d  1 2 3 4 5
+bspc monitor DVI-I-1-1 -d  6 7 8
+bspc monitor DVI-I-2-2 -d  9 10 11 
+# bspc monitor HDMI-2 -d 4 5 6
+
+
 polybar monitor1 &
 polybar monitor2 &
 polybar monitor3 &
 
-bspc monitor eDP-1 -d  1 2 3 4 5
-bspc monitor DVI-I-1-1 -d  4 5 6 
-bspc monitor DVI-I-2-2 -d  7 8 9 
-# bspc monitor HDMI-2 -d 4 5 6
 
 #
 # Configs
@@ -110,5 +114,5 @@ fi
 
 # Startup transparency 
 # 
-picom -b --config $HOME/.config/picom-ibhagwan-git/src/picom/picom.conf &
+# picom -b --config $HOME/.config/picom-ibhagwan-git/src/picom/picom.conf &
 
