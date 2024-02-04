@@ -6,7 +6,7 @@
 # Functions
 #
 # 	monitor_add
-# 	Add both monitors ($monitor1) only when the single laptop screen is being used (eDP-1).
+# 	Add both monitors only when single laptop screen is connected to docking station.
 #
 # 	monitor_remove
 # 	When switching back to single laptop screen, remove both desktops from BSPWM and from xrandr

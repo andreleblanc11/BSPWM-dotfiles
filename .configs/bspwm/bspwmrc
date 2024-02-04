@@ -18,8 +18,22 @@ fi
 
 # Dual monitor setup
 #
-if [ -x /home/andre/bin/DualMonitorSetUp.sh ];then
+if [ -x /home/andre/bin/DualMonitorSetUp.sh ]
+then
 	bash /home/andre/bin/DualMonitorSetUp.sh DVI-I-1-1 DVI-I-2-2
+
+	if [[ ! $(xrandr | grep "DVI.*disconnected") ]]
+	then
+		# Set default apps startup screens
+		bspc rule -a firefox desktop="^1"
+		bspc rule -a Alacritty desktop="^4"
+		bspc rule -a obsidian desktop="^7"
+
+	else
+		bspc rule -a firefox desktop="^1"
+		bspc rule -a Alacritty desktop="^2"
+		bspc rule -a obsidian desktop="^3"
+	fi
 fi
 
 pgrep -x sxhkd > /dev/null || sxhkd &
@@ -28,7 +42,6 @@ pgrep -x sxhkd > /dev/null || sxhkd &
 bspc monitor eDP-1 -d  1 2 3 4 5
 bspc monitor DVI-I-1-1 -d  6 7 8
 bspc monitor DVI-I-2-2 -d  9 10 11 
-# bspc monitor HDMI-2 -d 4 5 6
 
 
 polybar monitor1 &
@@ -81,13 +94,6 @@ then
 	. "${HOME}/bin/firefox_startup.sh"
 fi
 
-# If there is already a session running, attach to it.
-# if [[ $(tmux ls) ]]; then
-# 	alacritty -e bash -c "tmux attach" &
-# else
-# 	alacritty -e bash -c "tmux" &
-# fi
-
 # Startup alacritty
 # Kill sessions before starting
 killall alacritty
@@ -111,6 +117,16 @@ if [[ -f $HOME/bin/update_obsidian_theme.sh ]]
 then 
 	$HOME/bin/update_obsidian_theme.sh
 fi
+
+
+# Remove rules that were setup on startup. Don't want these rules to apply after startup.
+# Wait again a bit before removing these rules
+sleep 15
+
+bspc rule -r firefox
+bspc rule -r alacritty
+bspc rule -r obsidian
+
 
 # Startup transparency 
 # 
