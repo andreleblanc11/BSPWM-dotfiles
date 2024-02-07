@@ -2,7 +2,7 @@
 
 configuration {
 	modi:				"drun";
-	font: 				"Source code pro 14";
+	font: 				"Source code pro 12";
 	icon-theme: 			"Papirus-Dark";
 	location: 			2;
 	yoffset: 			100;
