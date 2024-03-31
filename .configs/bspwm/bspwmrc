@@ -126,7 +126,7 @@ fi
 sleep 15
 
 bspc rule -r firefox
-bspc rule -r alacritty
+bspc rule -r Alacritty
 bspc rule -r obsidian
 
 

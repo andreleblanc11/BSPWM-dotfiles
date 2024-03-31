@@ -22,6 +22,10 @@ F5
 F6
 	sudo light -A 5
 
+# Set computer in sleep mode
+# super + shift + F4
+# 	sudo systemctl suspend
+
 
 
 #
